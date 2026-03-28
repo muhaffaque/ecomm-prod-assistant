@@ -2,16 +2,16 @@ import os
 import sys
 import json
 from dotenv import load_dotenv
-from utils.config_loader import load_config
-from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
+from product_assistant.utils.config_loader import load_config
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_groq import ChatGroq
-from logger import GLOBAL_LOGGER as log
-from exception.custom_exception import ProductAssistantException
+from product_assistant.logger import GLOBAL_LOGGER as log
+from product_assistant.exception.custom_exception import ProductAssistantException
 import asyncio
 
 
 class ApiKeyManager:
-    REQUIRED_KEYS = ["GROQ_API_KEY", "GOOGLE_API_KEY"]
+    REQUIRED_KEYS = ["GROQ_API_KEY", "OPENAI_API_KEY"]
 
     def __init__(self):
         self.api_keys = {}
@@ -71,7 +71,7 @@ class ModelLoader:
 
     def load_embeddings(self):
         """
-        Load and return embedding model from Google Generative AI.
+        Load and return embedding model from Open AI Gen AI.
         """
         try:
             model_name = self.config["embedding_model"]["model_name"]
@@ -83,9 +83,9 @@ class ModelLoader:
             except RuntimeError:
                 asyncio.set_event_loop(asyncio.new_event_loop())
 
-            return GoogleGenerativeAIEmbeddings(
+            return OpenAIEmbeddings(
                 model=model_name,
-                google_api_key=self.api_key_mgr.get("GOOGLE_API_KEY")  # type: ignore
+                openai_api_key=self.api_key_mgr.get("OPENAI_API_KEY")  # type: ignore
             )
         except Exception as e:
             log.error("Error loading embedding model", error=str(e))
@@ -97,7 +97,7 @@ class ModelLoader:
         Load and return the configured LLM model.
         """
         llm_block = self.config["llm"]
-        provider_key = os.getenv("LLM_PROVIDER", "google")
+        provider_key = os.getenv("LLM_PROVIDER", "openai")
 
         if provider_key not in llm_block:
             log.error("LLM provider not found in config", provider=provider_key)
@@ -111,10 +111,10 @@ class ModelLoader:
 
         log.info("Loading LLM", provider=provider, model=model_name)
 
-        if provider == "google":
-            return ChatGoogleGenerativeAI(
+        if provider == "openai":
+            return ChatOpenAI(
                 model=model_name,
-                google_api_key=self.api_key_mgr.get("GOOGLE_API_KEY"),
+                openai_api_key=self.api_key_mgr.get("OPENAI_API_KEY"),
                 temperature=temperature,
                 max_output_tokens=max_tokens
             )

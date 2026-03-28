@@ -1,6 +1,6 @@
 import importlib.metadata
 packages = [
-    "langchain",
+    "langchain_openai",
     "python_dotenv",
     "langchain_core",
 ]
