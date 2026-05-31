@@ -56,3 +56,98 @@ HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
 cursor fetching a page: (empty page state) from ecommercedata
 HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/ecommercedata "HTTP/1.1 200 OK"
 cursor finished fetching a page: (empty page state) from ecommercedata
+{"timestamp": "2026-03-30T07:59:13.481904Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-03-30T07:59:13.481904Z", "level": "info", "event": "Loaded GROQ_API_KEY from individual env var"}
+{"timestamp": "2026-03-30T07:59:13.481904Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"GROQ_API_KEY": "gsk_jP...", "OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-03-30T07:59:13.481904Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-30T07:59:13.516419Z", "level": "info", "event": "YAML config loaded"}
+{"model": "text-embedding-3-large", "timestamp": "2026-03-30T07:59:13.596601Z", "level": "info", "event": "Loading embedding model"}
+vector store default init, collection 'ecommercedata'
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+No valid keyspace found in environment variable.
+Detecting API environment 'prod' from supplied endpoint
+createCollection('ecommercedata')
+HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 503 Service Unavailable"
+{"timestamp": "2026-03-30T07:59:27.618843Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-03-30T07:59:27.619642Z", "level": "info", "event": "Loaded GROQ_API_KEY from individual env var"}
+{"timestamp": "2026-03-30T07:59:27.619642Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"GROQ_API_KEY": "gsk_jP...", "OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-03-30T07:59:27.619642Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-30T07:59:27.630055Z", "level": "info", "event": "YAML config loaded"}
+{"model": "text-embedding-3-large", "timestamp": "2026-03-30T07:59:27.648045Z", "level": "info", "event": "Loading embedding model"}
+vector store default init, collection 'ecommercedata'
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+No valid keyspace found in environment variable.
+Detecting API environment 'prod' from supplied endpoint
+createCollection('ecommercedata')
+HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 400 Bad Request"
+{"timestamp": "2026-03-30T08:00:54.274683Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-03-30T08:00:54.274683Z", "level": "info", "event": "Loaded GROQ_API_KEY from individual env var"}
+{"timestamp": "2026-03-30T08:00:54.282704Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"GROQ_API_KEY": "gsk_jP...", "OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-03-30T08:00:54.282704Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-30T08:00:54.289057Z", "level": "info", "event": "YAML config loaded"}
+{"model": "text-embedding-3-large", "timestamp": "2026-03-30T08:00:54.299530Z", "level": "info", "event": "Loading embedding model"}
+vector store default init, collection 'ecommercedata'
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+No valid keyspace found in environment variable.
+Detecting API environment 'prod' from supplied endpoint
+createCollection('ecommercedata')
+HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+finished createCollection('ecommercedata')
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+inserting 1 documents in 'ecommercedata'
+insertMany(chunk) on 'ecommercedata'
+{"timestamp": "2026-03-30T08:01:59.530655Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-03-30T08:01:59.530655Z", "level": "info", "event": "Loaded GROQ_API_KEY from individual env var"}
+{"timestamp": "2026-03-30T08:01:59.530655Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"GROQ_API_KEY": "gsk_jP...", "OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-03-30T08:01:59.530655Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-30T08:01:59.542569Z", "level": "info", "event": "YAML config loaded"}
+{"model": "text-embedding-3-large", "timestamp": "2026-03-30T08:01:59.577974Z", "level": "info", "event": "Loading embedding model"}
+vector store default init, collection 'ecommercedata'
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+No valid keyspace found in environment variable.
+Detecting API environment 'prod' from supplied endpoint
+createCollection('ecommercedata')
+HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+finished createCollection('ecommercedata')
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+inserting 1 documents in 'ecommercedata'
+insertMany(chunk) on 'ecommercedata'
+{"timestamp": "2026-03-30T08:06:58.025808Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-03-30T08:06:58.025808Z", "level": "info", "event": "Loaded GROQ_API_KEY from individual env var"}
+{"timestamp": "2026-03-30T08:06:58.025808Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"GROQ_API_KEY": "gsk_jP...", "OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-03-30T08:06:58.025808Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-30T08:06:58.039642Z", "level": "info", "event": "YAML config loaded"}
+{"model": "text-embedding-3-large", "timestamp": "2026-03-30T08:06:58.098516Z", "level": "info", "event": "Loading embedding model"}
+vector store default init, collection 'ecommercedata'
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+No valid keyspace found in environment variable.
+Detecting API environment 'prod' from supplied endpoint
+createCollection('ecommercedata')
+HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+finished createCollection('ecommercedata')
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+inserting 1 documents in 'ecommercedata'
+insertMany(chunk) on 'ecommercedata'
+{"timestamp": "2026-03-30T08:08:33.112087Z", "level": "info", "event": "Running in LOCAL mode: .env loaded"}
+{"timestamp": "2026-03-30T08:08:33.116592Z", "level": "info", "event": "Loaded GROQ_API_KEY from individual env var"}
+{"timestamp": "2026-03-30T08:08:33.116592Z", "level": "info", "event": "Loaded OPENAI_API_KEY from individual env var"}
+{"keys": {"GROQ_API_KEY": "gsk_jP...", "OPENAI_API_KEY": "sk-pro..."}, "timestamp": "2026-03-30T08:08:33.116592Z", "level": "info", "event": "API keys loaded"}
+{"config_keys": ["astra_db", "embedding_model", "retriever", "llm"], "timestamp": "2026-03-30T08:08:33.127374Z", "level": "info", "event": "YAML config loaded"}
+{"model": "text-embedding-3-large", "timestamp": "2026-03-30T08:08:33.146338Z", "level": "info", "event": "Loading embedding model"}
+vector store default init, collection 'ecommercedata'
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+No valid keyspace found in environment variable.
+Detecting API environment 'prod' from supplied endpoint
+createCollection('ecommercedata')
+HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace "HTTP/1.1 200 OK"
+finished createCollection('ecommercedata')
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+inserting 2 documents in 'ecommercedata'
+insertMany(chunk) on 'ecommercedata'
+HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/ecommercedata "HTTP/1.1 200 OK"
+finished insertMany(chunk) on 'ecommercedata'
+finished inserting 2 documents in 'ecommercedata'
+HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+cursor fetching a page: (empty page state) from ecommercedata
+HTTP Request: POST https://fe2c81b3-de97-42c3-ad04-1b5363a89fea-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/ecommercedata "HTTP/1.1 200 OK"
+cursor finished fetching a page: (empty page state) from ecommercedata

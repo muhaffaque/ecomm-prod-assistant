@@ -19,8 +19,7 @@ class FlipkartScraper:
         options = uc.ChromeOptions()
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-blink-features=AutomationControlled")
-        driver = uc.Chrome(options=options,use_subprocess=True)
-
+        driver = uc.Chrome(options=options, use_subprocess=True, version_main=147)
         if not product_url.startswith("http"):
             driver.quit()
             return "No reviews found"
@@ -60,7 +59,7 @@ class FlipkartScraper:
         """Scrape Flipkart products based on a search query.
         """
         options = uc.ChromeOptions()
-        driver = uc.Chrome(options=options,use_subprocess=True)
+        driver = uc.Chrome(options=options, use_subprocess=True, version_main=147)
         search_url = f"https://www.flipkart.com/search?q={query.replace(' ', '+')}"
         driver.get(search_url)
         time.sleep(4)
